@@ -1,10 +1,12 @@
-import math
-n=int(input())
-numbers=[int(input()) for _ in range(n)]
+t=int(input())
+numbers=[int(input()) for _ in range(t)]
+answer=[]
 for number in numbers:
-    s=((number+1)*number)/2
+    value=int((number+1)*number*0.5)
     i=0
     while 2**i<=number:
-        s=s-2**(i+1)
+        value-=2*(2**i)
         i+=1
-    print(f"{math.ceil(s)}")
+    answer.append(value)
+for s in answer:
+    print(s)
