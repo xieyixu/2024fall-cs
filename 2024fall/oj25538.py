@@ -1,14 +1,11 @@
 n=int(input())
 a=bin(n)[2:]
-m=len(a)
-find=True
-left,right=0,m-1
-while left<=right:
-    if a[left]!=a[right]:
-        find=False
-    left+=1
-    right-=1
-if find:
-    print('Yes')
+j=0
+for i in range(len(a)):
+    if a[i]!=a[len(a)-i-1]:
+        j=1
+        break
+if j==1:
+    print("No")
 else:
-    print('No')
+    print("Yes")

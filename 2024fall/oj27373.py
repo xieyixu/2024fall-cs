@@ -6,6 +6,10 @@ for i in range(n):
         if a[j]+a[j+1]>a[j+1]+a[j]:
             a[j],a[j+1]=a[j+1],a[j]
 dp=[['']*(m+1) for _ in range(n+1)]
+for k in range(m+1):
+    dp[0][k]=''
+for k in range(n+1):
+    dp[k][0]=''
 for i in range(1,n+1):
     for j in range(1,m+1):
         if len(a[i-1])>j:
